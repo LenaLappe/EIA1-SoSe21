@@ -1,0 +1,30 @@
+.content{
+    margin: auto;
+    margin-top: -10px;
+    padding-bottom: 50px;
+    width: 800px;
+}
+
+
+.header{
+    background-color: black;
+    height: 400px;
+    border-bottom-left-radius: 550px;
+    border-bottom-right-radius: 550px;
+}
+
+.headlines{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.navigation{
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
