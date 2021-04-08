@@ -13,15 +13,44 @@
     border-bottom-right-radius: 550px;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#portfolio #navigation01 .active {
+    color: white;
+    background-color: rgb(148, 57, 57);
+    border-bottom-color: white;
+}
+#about-me #navigation02 .active {
+    color: white;
+    background-color: rgb(148, 57, 57);
+    border-bottom-color: white;
+}
+#contacts #navigation03 .active {
+    color: white;
+    background-color: rgb(148, 57, 57);
+    border-bottom-color: white;
+}
+
 .headlines{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-.navigation{
-
+.socials-box {
+    width: fit-content;
+    margin-top: -30px;
 }
+.socials {
+    opacity: 50%;
+    transition-duration: 0.4s;
+}
+.socials:hover {
+    opacity: 100%;
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
