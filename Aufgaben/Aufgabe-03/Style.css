@@ -1,14 +1,14 @@
 .everything {
     margin: auto;
-    margin-top: -10px;
+    margin-top: 0px;
     padding-bottom: 50px;
     width: 800px;
 }
 
 
 .header{
-    background-color: black;
-    height: 400px;
+    background-color: rgb(131, 21, 49);
+    height: 450px;
     border-bottom-left-radius: 550px;
     border-bottom-right-radius: 550px;
     position: relative;
@@ -24,15 +24,15 @@ li{
 }
 
 .navi {
-    background-color: rgb(43, 42, 42);
-    position: sticky;
+    background-color: rgb(131, 21, 49);
+    width: 790px;
     top: 0px;
-    width: 780px;
-    margin-left: 0px;
-    padding: 5px 10px ;
+    padding: 5px 5px 5px 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: fixed;
 }
+
 
 .navi a{
     color: white;
@@ -42,6 +42,11 @@ li{
     border-radius: 18px;
     border: 2px solid transparent;
     transition-duration: 0.4s;
+    margin: 0 70px;
+}
+
+.navi a:hover {
+    border: 2px solid white;
 }
 
 .navi .active {
@@ -51,17 +56,16 @@ li{
 
 .navigation {
     position: relative;
-    left: 210px;
+    left: 20px;
 }
 
 
 .header-headline {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 30pt;
     color: white;
-    height: 900px;
-    top: 50px;
-    left: 300px;
+    padding: 30px 0;
 }
 
 .socials-box {
@@ -70,10 +74,12 @@ li{
     top: 300px;
     right: 300px;
 }
+
 .socials {
-    opacity: 50%;
+    opacity: 60%;
     transition-duration: 1s;
 }
+
 .socials:hover {
     opacity: 100%;
 }
@@ -89,5 +95,10 @@ body {
 .contact-form {
     width: 500px;
     background-color: dimgrey;
+    padding: 10px;
+    border: 2px solid dimgrey;
+    opacity: 70%;
+    border-radius: 5px;
+    font-size: 16px;
 
 }
