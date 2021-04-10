@@ -15,7 +15,7 @@
 }
 
 a{
-    color: white;
+    color:rgb(131, 21, 49);
     text-decoration: none;
 }
 
@@ -114,11 +114,27 @@ h3 {
     border-radius: 20px;
 }
 
+#contact-message {
+    background-color: rgb(139, 49, 71);
+    opacity: 90%;
+    padding: 5px 5px;
+    width: 200px;
+    border-radius: 20px;
+}
+
 ::placeholder{
     color: ivory;
     font-family: cursive, sans-serif;
     font-size: 20px
 }
+
+#privacy-policy {
+    font-family: cursive, sans-serif;
+    font-size: 15px;
+    color: rgb(139, 49, 71);
+    opacity: 80%;
+}
+
 .contact-button {
     background-color: ivory;
     color: rgb(131, 21, 49);
