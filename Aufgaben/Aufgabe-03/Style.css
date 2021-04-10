@@ -8,7 +8,7 @@
 
 .header{
     background-color: rgb(131, 21, 49);
-    height: 450px;
+    height: 380px;
     border-bottom-left-radius: 550px;
     border-bottom-right-radius: 550px;
     position: relative;
@@ -35,9 +35,9 @@ li{
 
 
 .navi a{
-    color: white;
+    color: ivory;
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive, sans-serif;
     text-decoration: none;
     border-radius: 18px;
     border: 2px solid transparent;
@@ -46,12 +46,12 @@ li{
 }
 
 .navi a:hover {
-    border: 2px solid white;
+    border: 2px solid ivory;
 }
 
 .navi .active {
-    color: black;
-    background-color: white;
+    color: rgb(131, 21, 49);
+    background-color: ivory;
 }
 
 .navigation {
@@ -61,22 +61,23 @@ li{
 
 
 .header-headline {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30pt;
-    color: white;
-    padding: 30px 0;
+    font-family: cursive, sans-serif;
+    font-size: 26pt;
+    text-decoration: ivory;
+    color: ivory;
+    padding: 60px;
 }
+
 
 .socials-box {
     width: fit-content;
     position: absolute;
-    top: 300px;
-    right: 300px;
+    top: 205px;
+    right: 160px;
 }
 
 .socials {
-    opacity: 60%;
+    opacity: 40%;
     transition-duration: 1s;
 }
 
@@ -86,19 +87,44 @@ li{
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive, sans-serif;
     color: #000;
 }
 
 
+.main-headlines {
+    color: rgb(131, 21, 49);
+    text-decoration: rgb(131, 21, 49);
+}
+
+
+h3 {
+    color: rgb(139, 49, 71);
+}
 
 .contact-form {
-    width: 500px;
-    background-color: dimgrey;
-    padding: 10px;
-    border: 2px solid dimgrey;
-    opacity: 70%;
-    border-radius: 5px;
-    font-size: 16px;
+  width: fit-content;
+}
 
+.contact-text {
+    background-color: rgb(139, 49, 71);
+    opacity: 90%;
+    padding: 5px 5px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+::placeholder{
+    color: ivory;
+    font-family: cursive, sans-serif;
+    font-size: 20px
+}
+.contact-button {
+    background-color: ivory;
+    color: rgb(131, 21, 49);
+    font-family: cursive, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    border-color: rgb(131, 21, 49) ;
 }
