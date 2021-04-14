@@ -6,14 +6,15 @@ div.box {
     margin: 10px 10px;
 }
 
-div.penguin {
+.penguin {
     position: absolute;
-    left: 800px;
+    left: 450px;
+    bottom: 20px;
 }
 
-div.shells {
+.shells {
     position: absolute;
-    left: 330px;
+    bottom: 17px;
 }
 
 .text {
@@ -32,7 +33,7 @@ padding: 20px 40px;
 .text p {
     color: white;
     position: absolute;
-    bottom: 120px;
+    bottom: 135px;
     
 }
 
