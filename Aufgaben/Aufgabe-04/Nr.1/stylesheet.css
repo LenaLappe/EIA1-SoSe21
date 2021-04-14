@@ -1,0 +1,38 @@
+div.box {
+    position: relative;
+    top: 130px;
+    left: 355px;
+    width: fit-content;
+    margin: 10px 10px;
+}
+
+div.penguin {
+    position: absolute;
+    left: 800px;
+}
+
+div.shells {
+    position: absolute;
+    left: 330px;
+}
+
+.text {
+padding: 20px 40px;
+}
+
+.text h1 {
+    color: white;
+    position: absolute;
+    bottom: 280px;
+    right: 10px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.text p {
+    color: white;
+    position: absolute;
+    bottom: 120px;
+    
+}
+
