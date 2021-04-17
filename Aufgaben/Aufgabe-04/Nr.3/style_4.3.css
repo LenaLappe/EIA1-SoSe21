@@ -1,0 +1,31 @@
+.Box {
+    position: relative;
+    top: 180px;
+    left: 355px;
+    width: fit-content;
+}
+
+@font-face{
+    font-family: 'JellykaDeliciousCake';
+    src: url(font/jellyka_delicious_cake-webfont.woff);
+    src: url(font/jellyka_delicious_cake-webfont.woff2);
+}
+
+.text h1{
+    font-family: 'JellykaDeliciousCake';
+    color: beige;
+    margin: 20px 0px;
+    position: absolute;
+    bottom: 260px;
+    left: 40px;
+}
+
+.text p{
+    font-family: 'JellykaDeliciousCake';
+    color: beige;
+    font-size: 25px;
+    margin: 20px 60px;
+    position: absolute;
+    bottom: 60px;
+    
+}
