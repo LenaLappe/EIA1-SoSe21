@@ -1,0 +1,32 @@
+.Box {
+    position: relative;
+    top: 180px;
+    left: 355px;
+    width: fit-content;
+}
+
+h1 {
+    font-family: cursive, Arial;
+    color: beige;
+    font-size: 40px;
+    position: absolute;
+    bottom: 280px;
+    left: 190px;
+    text-decoration: beige;
+}
+
+.form {
+    width: fit-content;
+    margin: 20px 60px;
+    font-family: cursive, Arial;
+    color: beige;
+    position: absolute;
+    bottom: 30px;
+    left: 120px;
+}
+
+::placeholder{
+    font-family: cursive, Arial;
+    color: black;
+    font-size: 10px;
+}
