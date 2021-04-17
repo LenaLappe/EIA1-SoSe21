@@ -1,0 +1,23 @@
+.Box {
+    position: relative;
+    top: 180px;
+    left: 355px;
+    width: fit-content;
+}
+
+#banderole{
+    position: absolute;
+    top: 275px;
+    right: 0px;
+    z-index: 5;
+}
+
+.yt_video {
+    position: absolute;
+    bottom: 70px;
+    left: 42px;
+    width: 520px;
+    height: 280px;
+    z-index: 0;
+
+}
