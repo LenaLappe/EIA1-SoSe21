@@ -13,31 +13,41 @@ div.Box {
     font-size: 45px;
 }
 
-.Muscheln #Muschel1 {
+#Muschel1 {
     position: absolute;
     bottom: 150px;
     left: 160px;
+    transition: 0,6s;
 }
 
-.Muscheln #Muschel2 {
+#Muschel2 {
     position: absolute;
     bottom: 150px;
     left: 260px;
 }
 
-.Muscheln #Muschel3 {
+#Muschel3 {
     position: absolute;
     bottom: 150px;
     left: 360px;
 }
 
-.Muscheln #Muschel1:hover{
-    background-image: url(images/muschel_perle.png);
-}
-.Muscheln #Muschel2:hover{
-    background-image: url(images/muschel_perle.png);
+.open:hover {
+    opacity: 0%;
 }
 
-.open:hover{
-    opacity: 0%;
+#Muschel1:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
+}
+#Muschel2:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
+}
+#Muschel3:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
 }
