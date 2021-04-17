@@ -1,0 +1,53 @@
+.Box {
+    position: relative;
+    top: 180px;
+    left: 355px;
+    width: fit-content;
+}
+
+.text h1 {
+    color: white;
+    position: absolute;
+    bottom: 260px;
+    left: 70px;
+    font-size: 45px;
+}
+
+#Muschel1 {
+    position: absolute;
+    bottom: 150px;
+    left: 160px;
+    transition: 0,6s;
+}
+
+#Muschel2 {
+    position: absolute;
+    bottom: 150px;
+    left: 260px;
+}
+
+#Muschel3 {
+    position: absolute;
+    bottom: 150px;
+    left: 360px;
+}
+
+.open:hover {
+    opacity: 0%;
+}
+
+#Muschel1:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
+}
+#Muschel2:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
+}
+#Muschel3:hover{
+    position: absolute;
+    background-image: url(images/muschel_perle.png);
+    opacity: 100%;
+}
