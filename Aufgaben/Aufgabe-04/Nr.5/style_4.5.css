@@ -1,3 +1,7 @@
+.background{
+    background-image: url(images/bg.png);
+}
+
 .Box {
     position: relative;
     top: 180px;
