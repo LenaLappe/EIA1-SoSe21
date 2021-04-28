@@ -25,7 +25,8 @@ window.addEventListener("load", function () {
     document.querySelector('.asia').addEventListener('click', function () { emissions(country5, country5_2018, country5_2008); });
     document.querySelector('.australia').addEventListener('click', function () { emissions(country6, country6_2018, country6_2008); });
     function emissions(continent, continent2018, continent2008) {
-        document.querySelector("#titleRegion").innerHTML = continent;
+        document.querySelector(".titleRegion").innerHTML = continent;
+        document.querySelector(".subtitleRegion").innerHTML = continent;
         document.querySelector(".region2018").innerHTML = continent2018.toString();
         document.querySelector(".regionRelative").innerHTML = Math.round(continent2018 / wholeWorld2018 * 100 * 100) / 100 + "%";
         document.querySelector(".regionGrowthRelative").innerHTML = Math.round((continent2018 - continent2008) / continent2008 * 100 * 100) / 100 + "%";

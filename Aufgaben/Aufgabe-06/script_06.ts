@@ -32,7 +32,8 @@ window.addEventListener("load", function(){
 
         function emissions(continent: string, continent2018: number, continent2008: number) {
 
-            document.querySelector ("#titleRegion").innerHTML = continent;
+            document.querySelector (".titleRegion").innerHTML = continent;
+            document.querySelector (".subtitleRegion").innerHTML = continent;
             document.querySelector (".region2018").innerHTML = continent2018 .toString(); 
             document.querySelector (".regionRelative").innerHTML = Math.round(continent2018 / wholeWorld2018 *100 *100)/100 + "%";
             document.querySelector (".regionGrowthRelative").innerHTML = Math.round((continent2018 - continent2008) / continent2008 * 100 * 100) / 100 + "%";
