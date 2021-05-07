@@ -14,13 +14,13 @@ window.addEventListener("load", function () {
         sound.play();
     }
     ;
-    var drumMachine = [beats[5], beats[8], beats[5], beats[5], beats[8], beats[5], beats[8], beats[5], beats[5], beats[8]];
+    var drumMachine = [beats[5], beats[8], beats[5], beats[5], beats[8]];
     var PositionImArray = 0;
     document.querySelector('#playButton').addEventListener('click', function () {
         setInterval(function machine() {
             drumMachine[PositionImArray].play();
             PositionImArray += 1;
-            if (PositionImArray > 7)
+            if (PositionImArray > 4)
                 PositionImArray = 0;
         }, 200);
     });
