@@ -1,0 +1,242 @@
+body {
+    background-color: black;
+}
+
+.drumPad{
+    position: relative;
+    margin: 0 auto;
+    height: 460px;
+    width: 460px;
+    background-color: black;
+    top:20px;
+}
+
+.button1{
+    position:absolute;
+    width:150px;
+    height:150px;
+    background-color: #b9aeee;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.button1:hover{
+    transform: scale(1.02);
+}
+.button1:active{
+    width: 142px;
+    height: 142px;
+    background-color: #4827ec;
+}
+
+.button2{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left: 155px;
+    background-color: #dab0ee;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button2:hover{
+    transform: scale(1.02);
+}
+.button2:active{
+    width: 142px;
+    height: 142px;
+    background-color: #ab1cee;
+}
+
+.button3{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left:310px;
+    background-color: #d8acd2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button3:hover{
+    transform: scale(1.02);
+}
+.button3:active{
+    width: 142px;
+    height: 142px;
+    background-color: #dd1ac3;
+}
+
+.button4{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-top: 155px;
+    background-color: #dab0ee;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button4:hover{
+    transform: scale(1.02);
+}
+.button4:active{
+    width: 142px;
+    height: 142px;
+    background-color: #ab1cee;
+}
+
+.button5{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left: 155px;
+    margin-top:155px;
+    background-color: #d8acd2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button5:hover{
+    transform: scale(1.02);
+}
+.button5:active{
+    width: 142px;
+    height: 142px;
+    background-color: #dd1ac3;
+}
+
+.button6{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left:310px;
+    margin-top: 155px;
+    background-color: #f1b8d5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button6:hover{
+    transform: scale(1.02);
+}
+.button6:active{
+    width: 142px;
+    height: 142px;
+    background-color: #ec1484;
+}
+
+.button7{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-top: 310px;
+    background-color: #d8acd2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button7:hover{
+    transform: scale(1.02);
+}
+.button7:active{
+    width: 142px;
+    height: 142px;
+    background-color: #dd1ac3;
+}
+.button8{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left: 155px;
+    margin-top: 310px;
+    background-color:  #f1b8d5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button8:hover{
+    transform: scale(1.02);
+}
+.button8:active{
+    width: 142px;
+    height: 142px;
+    background-color: #ec1484;
+}
+.button9{
+    position:absolute;
+    width:150px;
+    height:150px;
+    margin-left:310px;
+    margin-top: 310px;
+    background-color: #f3a2bb;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button9:hover{
+    transform: scale(1.02);
+}
+.button9:active{
+    width: 142px;
+    height: 142px;
+    background-color: #e9185a;
+}
+
+
+#playButton {
+    position:absolute;
+    color: white;
+    bottom:120px;
+    left: 50%;
+    margin-left:-40px;
+    font-size: 80px;
+}
+#playButton:hover {
+    transform: scale(1.10);
+}
+#playButton:active {
+    transform: scale(1.2)
+}
+
+#stopButton {
+    position:absolute;
+    color: white;
+    bottom:120px;
+    left: 50%;
+    margin-left:-40px;
+    font-size: 80px;
+}
+#stopButton:hover {
+    transform: scale(1.10);
+}
+#stopButton:active {
+    transform: scale(1.2)
+}
+
+#trashButton {
+    position:absolute;
+    color: white;
+    bottom:120px;
+    left: 70%;
+    margin-left:-40px;
+    font-size: 80px;
+}
+#trashButton:hover{
+    transform: scale(1.10);
+}
+#trashButton:active{
+    transform: scale(1.2)
+}
+
+#remixButton {
+    position:absolute;
+    color: white;
+    bottom:120px;
+    left: 30%;
+    margin-left:-40px;
+    font-size: 80px;
+}
+#remixButton:hover{
+    transform: scale(1.10);
+}
+#remixButton:active{
+    transform: scale(1.2)
+}
+
+
+.is-hidden {
+    display: none !important;
+}
