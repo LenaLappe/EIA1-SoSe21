@@ -26,6 +26,7 @@ window.addEventListener("load", function() {
    
     //Funktionen und Schleifen
 
+    // tslint:disable-next-line: typedef
     function playSound(sampleMP3) {
 
     var sound: HTMLAudioElement = new Audio(sampleMP3);

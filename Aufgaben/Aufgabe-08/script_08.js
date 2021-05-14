@@ -19,6 +19,7 @@ window.addEventListener("load", function () {
     document.querySelector(".button8").addEventListener("click", function () { playSound("sounds_02/laugh-2.mp3"); });
     document.querySelector(".button9").addEventListener("click", function () { playSound("sounds_02/snare.mp3"); });
     //Funktionen und Schleifen
+    // tslint:disable-next-line: typedef
     function playSound(sampleMP3) {
         var sound = new Audio(sampleMP3);
         sound.play();
