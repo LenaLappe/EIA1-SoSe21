@@ -43,6 +43,8 @@ window.addEventListener("load", function() {
                 drumMachine[PositionImArray].play();
                 PositionImArray += 1;
                 if (PositionImArray > 4) PositionImArray = 0;
+                
+                console.log (PositionImArray);
 
                 }
 

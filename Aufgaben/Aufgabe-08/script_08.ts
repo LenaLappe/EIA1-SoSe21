@@ -1,58 +1,67 @@
 // tslint:disable-next-line: typedef
 window.addEventListener("load", function() {
 
-    
+    //Variablen
 
-    let beats: HTMLAudioElement[] = [new Audio("sounds/A.mp3"), new Audio("sounds/C.mp3"), new Audio("sounds/F.mp3"), new Audio ("sounds/G.mp3"), new Audio("sounds/hihat.mp3"), new Audio ("sounds/kick.mp3"), new Audio ("sounds/laugh-1.mp3"), new Audio ("sounds/laugh-2.mp3"), new Audio ("sounds/snare.mp3")]; 
-
-
-
-    document.querySelector(".button1").addEventListener("click", function(): void {playSound("sounds/A.mp3"); });
-    document.querySelector(".button2").addEventListener("click", function(): void {playSound("sounds/C.mp3"); });
-    document.querySelector(".button3").addEventListener("click", function(): void {playSound("sounds/F.mp3"); });
-    document.querySelector(".button4").addEventListener("click", function(): void {playSound("sounds/G.mp3"); });
-    document.querySelector(".button5").addEventListener("click", function(): void {playSound("sounds/hihat.mp3"); });
-    document.querySelector(".button6").addEventListener("click", function(): void {playSound("sounds/kick.mp3"); });
-    document.querySelector(".button7").addEventListener("click", function(): void {playSound("sounds/laugh-1.mp3"); });
-    document.querySelector(".button8").addEventListener("click", function(): void {playSound("sounds/laugh-2.mp3"); });
-    document.querySelector(".button9").addEventListener("click", function(): void {playSound("sounds/snare.mp3"); });
-
+    let allSounds: string[] = ["sounds_02/A.mp3", "sounds_02/C.mp3", "sounds_02/F.mp3",  "sounds_02/G.mp3", "sounds_02/hihat.mp3", "sounds_02/kick.mp3", "sounds_02/laugh-1.mp3", "sounds_02/laugh-2.mp3", "sounds_02/snare.mp3"]; 
+    let beats: string[] = [allSounds[5], allSounds[8], allSounds[5], allSounds[5], allSounds[8]];
     let index: number = 0;
+    let interval: number;
+    var buttons = document.querySelector(".B");
+    var play = document.getElementById("playButton");
+    var stop = document.getElementById("stopButton");
+    var trash = document.getElementById("trashButton");
 
-    function playSound(beats) {
 
-    var sound: HTMLAudioElement = new Audio(beats);
+    document.querySelector(".button1").addEventListener("click", function(): void {playSound("sounds_01/A.mp3"); });
+    document.querySelector(".button2").addEventListener("click", function(): void {playSound("sounds_02/C.mp3"); });
+    document.querySelector(".button3").addEventListener("click", function(): void {playSound("sounds_02/F.mp3"); });
+    document.querySelector(".button4").addEventListener("click", function(): void {playSound("sounds_02/G.mp3"); });
+    document.querySelector(".button5").addEventListener("click", function(): void {playSound("sounds_02/hihat.mp3"); });
+    document.querySelector(".button6").addEventListener("click", function(): void {playSound("sounds_02/kick.mp3"); });
+    document.querySelector(".button7").addEventListener("click", function(): void {playSound("sounds_02/laugh-1.mp3"); });
+    document.querySelector(".button8").addEventListener("click", function(): void {playSound("sounds_02/laugh-2.mp3"); });
+    document.querySelector(".button9").addEventListener("click", function(): void {playSound("sounds_02/snare.mp3"); });
+
+   
+    //Funktionen und Schleifen
+
+    function playSound(sampleMP3) {
+
+    var sound: HTMLAudioElement = new Audio(sampleMP3);
     sound.play();
     }
 
-
-    var drumMachine: HTMLAudioElement[] = [beats[5], beats[8], beats[5], beats[5], beats[8] ];
-
-
     document.querySelector("#playButton").addEventListener("click", function(): void {
+        var drumMachine: number = setInterval(function myInterval(): void { 
+
+            playSound(
         
-    var drumMachine: number = setInterval(function myInterval(): void {
+                beats[index]);
+            index += 1;
 
-                playSound(
-        
-                    beats[index]);
-                index += 1;
-
-                if (index > 4)
-                index = 0;
-
-                console.log ("Hallo");
+            if (index > 4) {index = 0; }
 
 
+            console.log ("play");
+            console.log(index);
 
+        },                                    500);
 
-                document.querySelector("#stopButton").addEventListener("click", function(): void {
-        
-                    clearInterval(drumMachine);
-                });
-                
-    });
     
+        document.querySelector("#stopButton").addEventListener("click", function(): void {
+        clearInterval(drumMachine);
+
+        console.log ("stop");
+        });
+    });
+   
+
+
+
+
+    
+    //Buttons
 
     document.querySelector("#playButton").addEventListener("click", function(): void {
                     document.querySelector("#playButton").classList.add("is-hidden");
@@ -66,11 +75,26 @@ window.addEventListener("load", function() {
                 });
              
                 
-    document.querySelector("delete_Button").addEventListener("click", function(): void {
-                    beats.length = 0;
+    document.querySelector("#trashButton").addEventListener("click", function(): void {
+                    beats = [];
+
+                    console.log ("löschen");
                 });
 
 
-    });    
+    document.querySelector("#remixButton").addEventListener("click", function(): void {
+
+                    var drumMachine: number = setInterval(function(): void {
+                        playSound(
+                            allSounds[index]);
+
+                        index = Math.floor(Math.random() * 9);
+
+                        console.log (index);
+
+                    },                                    500);
+                });
+
+
 
 });

@@ -36,6 +36,7 @@ window.addEventListener("load", function () {
             PositionImArray += 1;
             if (PositionImArray > 4)
                 PositionImArray = 0;
+            console.log(PositionImArray);
         }
         // tslint:disable-next-line: align
         , 200);
