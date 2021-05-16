@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     var play = document.getElementById("playButton");
     var stop = document.getElementById("stopButton");
     var trash = document.getElementById("trashButton");
-    document.querySelector(".button1").addEventListener("click", function () { playSound("sounds_01/A.mp3"); });
+    document.querySelector(".button1").addEventListener("click", function () { playSound("sounds_02/A.mp3"); });
     document.querySelector(".button2").addEventListener("click", function () { playSound("sounds_02/C.mp3"); });
     document.querySelector(".button3").addEventListener("click", function () { playSound("sounds_02/F.mp3"); });
     document.querySelector(".button4").addEventListener("click", function () { playSound("sounds_02/G.mp3"); });
@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
             }
             console.log("play");
             console.log(index);
-        }, 500);
+        }, 250);
         document.querySelector("#stopButton").addEventListener("click", function () {
             clearInterval(drumMachine);
             console.log("stop");
