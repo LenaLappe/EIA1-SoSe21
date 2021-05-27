@@ -71,19 +71,23 @@ window.addEventListener("load", function(): void {
 
         const item = ele.target;
 
-        if (item.classList[0] === "binButton") {
+        if (item.classList[0] == "binButton") {
             const todo = item.parentElement;
             todo.remove();
             zaehler--;
             counter();
+
+            console.log("löschen");
         }
 
-        if (item.classList[0] === "completedButton") {
+        if (item.classList[0] == "completedButton") {
             const todo = item.parentElement;
             todo.remove();
             todo.classList.toggle("completed");
             zaehler--;
             counter();
+
+            console.log("checken");
         }
 
     }

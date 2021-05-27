@@ -40,18 +40,20 @@ window.addEventListener("load", function () {
     //Buttons
     function deleteCheck(ele) {
         var item = ele.target;
-        if (item.classList[0] === "binButton") {
+        if (item.classList[0] == "binButton") {
             var todo = item.parentElement;
             todo.remove();
             zaehler--;
             counter();
+            console.log("löschen");
         }
-        if (item.classList[0] === "completedButton") {
+        if (item.classList[0] == "completedButton") {
             var todo = item.parentElement;
             todo.remove();
             todo.classList.toggle("completed");
             zaehler--;
             counter();
+            console.log("checken");
         }
     }
     // Taskcounter
