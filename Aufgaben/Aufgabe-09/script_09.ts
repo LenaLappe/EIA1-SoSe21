@@ -82,10 +82,8 @@ window.addEventListener("load", function(): void {
 
         if (item.classList[0] == "completedButton") {
             const todo = item.parentElement;
-            todo.remove();
+            todo.setAttribute("style", "text-decoration: " + "line-through");
             todo.classList.toggle("completed");
-            zaehler--;
-            counter();
 
             console.log("checken");
         }
@@ -95,7 +93,7 @@ window.addEventListener("load", function(): void {
 
     // Taskcounter
     function counter(): void {
-        document.querySelector("#counter").innerHTML = zaehler + " tasks are left";
+        document.querySelector("#counter").innerHTML = zaehler + " in total";
     }
 
 

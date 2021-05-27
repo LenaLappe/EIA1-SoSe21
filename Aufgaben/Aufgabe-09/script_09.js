@@ -49,16 +49,14 @@ window.addEventListener("load", function () {
         }
         if (item.classList[0] == "completedButton") {
             var todo = item.parentElement;
-            todo.remove();
+            todo.setAttribute("style", "text-decoration: " + "line-through");
             todo.classList.toggle("completed");
-            zaehler--;
-            counter();
             console.log("checken");
         }
     }
     // Taskcounter
     function counter() {
-        document.querySelector("#counter").innerHTML = zaehler + " tasks are left";
+        document.querySelector("#counter").innerHTML = zaehler + " in total";
     }
 });
 //# sourceMappingURL=script_09.js.map
