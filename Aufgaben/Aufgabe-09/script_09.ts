@@ -27,6 +27,7 @@ window.addEventListener("load", function(): void {
     toDoList.addEventListener("click", deleteCheck);
 
 
+
     function addToDo(event): void {
 
         event.preventDefault();

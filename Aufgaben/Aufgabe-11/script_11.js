@@ -1,20 +1,54 @@
 window.addEventListener("load", function () {
+    //artyom
+    var artyom = new Artyom();
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Bereit!");
+            });
+        }, 250);
+    }
+    artyom.addCommands({
+        indexes: ["füge Aufgabe hinzu *"],
+        smart: true,
+        action: function (i, wildcard) {
+            toDoArray.unshift({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            drawListToDOM();
+            artyom.say("Aufgabe wurde ergänzt");
+        }
+    });
+    document.querySelector("#micButton").addEventListener("click", function () {
+        artyom.say("Sage füge eine Aufgabe hinzu");
+        startContinuousArtyom();
+    });
     var inputDOMElement;
     var addButtonDOMElement;
     var todosDOMElement;
     var counterDOMElement;
+    var counterDOMElementOpen;
+    var counterDOMElementDone;
     //Objekt
     var toDoArray = [
         {
-            todosText: "Lorem",
+            todosText: "EIA machen",
             todosChecked: true
         },
         {
-            todosText: "Ipsum",
+            todosText: "BWL Hausarbeit",
             todosChecked: false
         },
         {
-            todosText: "Dolor",
+            todosText: "Medientechnik lernen",
             todosChecked: false
         }
     ];
@@ -27,6 +61,8 @@ window.addEventListener("load", function () {
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    counterDOMElementOpen = document.querySelector("#open");
+    counterDOMElementDone = document.querySelector("#done");
     /**
      * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
      * auf den AddToDo Button gesetzt werden.
@@ -41,6 +77,7 @@ window.addEventListener("load", function () {
         // alle todos erst einmal aus dem DOM löschen
         todosDOMElement.innerHTML = "";
         var _loop_1 = function (index) {
+            // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
             /**
              * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen,
              * die Objekt-Instansierung ist aber übersichtlicher)
@@ -74,15 +111,31 @@ window.addEventListener("load", function () {
             // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
             todosDOMElement.appendChild(todo);
         };
-        // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
         for (var index = 0; index < toDoArray.length; index++) {
             _loop_1(index);
         }
         updateCounter();
+        counterOpen();
+        counterDone();
     }
     function updateCounter() {
-        if (document.getElementById("total") == )
-            counterDOMElement.innerHTML = toDoArray.length + " in total";
+        counterDOMElement.innerHTML = toDoArray.length + " in total";
+    }
+    function counterOpen() {
+        var open = 0;
+        for (var index = 0; index < toDoArray.length; index++) {
+            if (toDoArray[index].todosChecked == false)
+                open++;
+        }
+        counterDOMElementOpen.innerHTML = open + " open,";
+    }
+    function counterDone() {
+        var done = 0;
+        for (var index = 0; index < toDoArray.length; index++) {
+            if (toDoArray[index].todosChecked == true)
+                done++;
+        }
+        counterDOMElementDone.innerHTML = done + " done";
     }
     /**
      * Ein neues ToDo wird folgendermaßen erstellt:

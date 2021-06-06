@@ -7,16 +7,23 @@
     <title>ToDo App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style_11.css">
-    <script src="script_11.js"></script>
+    <script src="script_11.js" defer></script>
+    <script src="libs/artyom.window.min.js"></script>
 </head>
 <body>
     <main>
-        <h1>ToDo App</h1>
-        <p id="counter"><Span id="total">0</Span> in total <span id="open">open</span></p>
+        <h1><u>ToDo App</u></h1>
+
+        <p id="counter"><Span id="total">0</Span> in total</p>
+        <p id="open">open</p>
+        <p id="done">done</p>
+
+        <p id="explain">klicke auf das Mikrofon und gebe den Befehl "füge Aufgabe hinzu" danach sag was du gerne deiner Liste hinzufügen willst.</p>
 
         <div class="inputGroup">
             <input type="text" id="inputTodo" placeholder="Add another task">
             <button id="addButton"><i class="fas fa-plus-circle"></i></button>
+            <button id="micButton"><i class="fas fa-microphone-alt"></i> </button>
         </div>
 
         <div id="todos"></div>
